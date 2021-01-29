@@ -2,9 +2,9 @@ package Model;
 
 import java.io.IOException;
 
-public interface  DataInterface {
+public interface  DataModelInterface {
 
 	String loadData() throws IOException;
-	void updateData();
+	boolean updateData(String data);
 	
 }
