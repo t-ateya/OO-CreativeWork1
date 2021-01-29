@@ -6,6 +6,13 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "Launch AppDriver",
+			"request": "launch",
+			"mainClass": "Main.AppDriver",
+			"projectName": "LoadUpdateDataApp_6f311470"
+		},
+		{
+			"type": "java",
 			"name": "Launch Current File",
 			"request": "launch",
 			"mainClass": "${file}"
@@ -25,7 +32,6 @@
 			"mainClass": "Test.test",
 			"projectName": "LoadUpdateDataApp_6f311470"
 		},
-
 		{
 			"type": "java",
 			"name": "Launch test",
