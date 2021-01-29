@@ -1,7 +1,10 @@
 package Model;
 
-public interface DataInterface {
-	String loadData();
+import java.io.IOException;
+
+public interface  DataInterface {
+
+	String loadData() throws IOException;
 	void updateData();
 	
 }
