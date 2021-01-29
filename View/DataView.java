@@ -137,8 +137,8 @@ public class DataView extends JFrame {
 			}
 			
 		});
-	}
-	
+	} 
+
 
 	
 }
