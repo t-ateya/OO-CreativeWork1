@@ -1,7 +1,10 @@
 package View;
 
+import java.awt.BorderLayout;
 import java.awt.Container;
+import java.awt.Dimension;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -18,7 +21,20 @@ public class MenuScreen {
 		Container cp = window.getContentPane();
 
 		JPanel menuPanel = new JPanel();
-		
+		menuPanel.setPreferredSize(new Dimension(400, 200));
+
+		JButton loadAndUpdateDataButton = new JButton("Load and Update Data in a File");
+		menuPanel.add(loadAndUpdateDataButton);
+
+		cp.add(BorderLayout.CENTER, menuPanel);
+
+		loadAndUpdateDataButton.addActionListener(event->{
+			window.getContentPane().removeAll();
+			var panel = new DataPanel(window);
+			panel.init();
+			window.pack();
+			window.revalidate();
+		});
 
 		
 ;	}
