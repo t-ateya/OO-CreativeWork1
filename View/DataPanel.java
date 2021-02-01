@@ -2,17 +2,19 @@ package View;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 import java.awt.GridLayout;
-
+import java.awt.BorderLayout;
 import java.awt.Container;
 
 
 
 public class DataPanel {
 	private JFrame window;
+	private DataCanvas canvas;
 	private JButton loadDataButton = new JButton("Load Data");
 	private JButton updateDataButton = new JButton("Update Data");
 	private JButton quitJButton = new JButton("Quit App");
@@ -28,6 +30,27 @@ public class DataPanel {
 
 		JPanel southPanel = new JPanel();
 		southPanel.setLayout(new GridLayout(2,1));
+		cp.add(BorderLayout.SOUTH, southPanel);
+
+		JPanel south1 = new JPanel();
+		south1.add(new JLabel("Type Data Here: "));
+		south1.add(myMessage);
+		southPanel.add(south1);
+
+		JPanel south2 = new JPanel();
+		south2.add(loadDataButton);
+		south2.add(updateDataButton);
+		south2.add(quitJButton);
+		southPanel.add(south2);
+
+		//Create a Canvas
+		canvas = new DataCanvas(this);
+		cp.add(BorderLayout.CENTER, canvas);
+		
+
+
+
+
 	}
 
 
