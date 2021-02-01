@@ -17,7 +17,7 @@ public class DataPanel {
 	private DataCanvas canvas;
 	private JButton loadDataButton = new JButton("Load Data");
 	private JButton updateDataButton = new JButton("Update Data");
-	private JButton quitJButton = new JButton("Quit App");
+	private JButton quitButton = new JButton("Quit App");
 
 	private JTextArea myMessage = new JTextArea();
 
@@ -40,18 +40,33 @@ public class DataPanel {
 		JPanel south2 = new JPanel();
 		south2.add(loadDataButton);
 		south2.add(updateDataButton);
-		south2.add(quitJButton);
+		south2.add(quitButton);
 		southPanel.add(south2);
 
 		//Create a Canvas
 		canvas = new DataCanvas(this);
 		cp.add(BorderLayout.CENTER, canvas);
+
+		/*DataButtonListener listener = new DataButtonListener(this);
 		
-
-
-
-
+	}*/
+	public JButton getLoadDataButton(){
+		return loadDataButton;
 	}
+
+	public JButton getUpdateDataButton(){
+		return updateDataButton;
+	}
+
+	public JButton getQuitButton(){
+		return quitButton;
+	}
+
+	public DataCanvas getCanvas(){
+		return canvas;
+	}
+	
+
 
 
 	
