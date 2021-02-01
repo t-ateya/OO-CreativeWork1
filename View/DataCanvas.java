@@ -15,7 +15,7 @@ public class DataCanvas extends JPanel{
 
 	public DataCanvas(DataPanel panel ){
 		this.panel = panel;
-		setPreferredSize(new Dimension(500, 500));
+		setPreferredSize(new Dimension(250, 250));
 		setBackground(Color.BLACK);
 	}
 	
@@ -24,7 +24,8 @@ public class DataCanvas extends JPanel{
 		super.paintComponent(g);
 
 		Graphics2D g2 = (Graphics2D)g;
-		DataModelInterface d = new DataModel();
-		d.render(g2);
+		DataModel d = new DataModel();
+		//d.getData();
+		//d.render(g2);
 	}
 }

@@ -4,7 +4,7 @@ import javax.swing.JFrame;
 
 import View.MenuScreen;
 
-public class main {
+public class DataAppRunner {
 	public static void main(String[]args){
 		JFrame window = new JFrame();
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -13,6 +13,7 @@ public class main {
 
 		var menu = new MenuScreen(window);
 		menu.init();
+		
 		window.pack();
 		window.setVisible(true);
 	}

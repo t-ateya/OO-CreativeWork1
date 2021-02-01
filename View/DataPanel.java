@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 import java.awt.GridLayout;
 import java.awt.BorderLayout;
@@ -19,6 +20,7 @@ public class DataPanel {
 	private JButton updateDataButton = new JButton("Update Data");
 	private JButton quitButton = new JButton("Quit App");
 
+	
 	private JTextArea myMessage = new JTextArea();
 
 	public DataPanel(JFrame window){
@@ -33,8 +35,9 @@ public class DataPanel {
 		cp.add(BorderLayout.SOUTH, southPanel);
 
 		JPanel south1 = new JPanel();
-		south1.add(new JLabel("Type Data Here: "));
-		south1.add(myMessage);
+		//south1.add(new JLabel("Type Data Here: "));
+		
+		//south1.add(myMessage);
 		southPanel.add(south1);
 
 		JPanel south2 = new JPanel();
@@ -47,9 +50,10 @@ public class DataPanel {
 		canvas = new DataCanvas(this);
 		cp.add(BorderLayout.CENTER, canvas);
 
-		/*DataButtonListener listener = new DataButtonListener(this);
+		//DataButtonListener listener = new DataButtonListener(this);
 		
-	}*/
+	}
+
 	public JButton getLoadDataButton(){
 		return loadDataButton;
 	}

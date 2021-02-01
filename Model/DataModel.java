@@ -11,12 +11,12 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Paths;;
+import java.nio.file.Paths;
 
-public class DataModel implements DataModelInterface {
-	private String data = null;
+public class DataModel implements DataModelInterface{
+	private String data;
 
-	@Override
+	
 	public String loadData() throws FileNotFoundException, IOException {
 		if (!(new File("file.txt").isFile())) {
 			System.out.println("File does not exits-I am creating the file");
@@ -43,7 +43,7 @@ public class DataModel implements DataModelInterface {
 
 	}
 
-	@Override
+	
 	public boolean updateData(String data) {
 
 		// Save data to the file
@@ -57,15 +57,16 @@ public class DataModel implements DataModelInterface {
 
 	}
 
+	
 	public String getData() {
 		return data;
 	}
 
-	@Override
+	
 	public void render(Graphics2D g2) {
 		g2.setColor(Color.yellow);
 		g2.setFont(new Font("Courier", Font.BOLD, 14));
-		g2.drawString(data, 50, 100);
+		g2.drawString(getData(), 50, 100);
 
 	}
 

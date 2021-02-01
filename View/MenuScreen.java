@@ -23,8 +23,8 @@ public class MenuScreen {
 		Container cp = window.getContentPane();
 
 		JPanel menuPanel = new JPanel();
-		menuPanel.setLayout(new GridLayout(2, 1));
-		menuPanel.setPreferredSize(new Dimension(400, 200));
+		//menuPanel.setLayout(new GridLayout(2, 1));
+		menuPanel.setPreferredSize(new Dimension(200, 100));
 
 		JButton loadAndUpdateDataButton = new JButton("Load and Update Data");
 		menuPanel.add(loadAndUpdateDataButton);
@@ -38,8 +38,10 @@ public class MenuScreen {
 			window.pack();
 			window.revalidate();
 		});
+	}
 
-		
-;	}
+	public JFrame getWindow(){
+		return window;
+	}
 	
 }

@@ -6,6 +6,13 @@
 	"configurations": [
 		{
 			"type": "java",
+			"name": "Launch DataAppRunner",
+			"request": "launch",
+			"mainClass": "Main.DataAppRunner",
+			"projectName": "OO-CreativeWork1_c795ebbc"
+		},
+		{
+			"type": "java",
 			"name": "Launch main",
 			"request": "launch",
 			"mainClass": "Main.main",

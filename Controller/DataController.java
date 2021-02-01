@@ -4,19 +4,18 @@ import Model.DataModel;
 import Model.DataModelInterface;
 import View.DataView;
 
-public class DataController implements DataControllerInterface {
+public class DataController implements DataControllerInterface{
 	private DataView view;
 	private DataModelInterface model;
 
 	//View the application's GUI
-	@Override
 	public void startApplication() {
 		view = new DataView();
 		view.setVisible(true);
 
 	}
 
-	@Override
+	
 	public String getMessage() {
 		try {
 			model = new DataModel();

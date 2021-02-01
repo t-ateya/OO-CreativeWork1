@@ -8,5 +8,6 @@ public interface  DataModelInterface {
 	String loadData() throws IOException;
 	boolean updateData(String data);
 	void render(Graphics2D g2);
+	String getData();
 	
 }
