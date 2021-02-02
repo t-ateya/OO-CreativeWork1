@@ -1,8 +1,11 @@
 package Controller;
 
+import java.io.IOException;
+
+
 public interface DataControllerInterface {
-	void startApplication();
-	String getMessage();
+	
+	String getMessage() throws IOException;
 	boolean writeMessage(String message);
 	
 }

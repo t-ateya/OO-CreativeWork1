@@ -8,10 +8,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import java.awt.GridLayout;
-
-
-
 public class MenuScreen {
 	private JFrame window;
 
@@ -23,8 +19,7 @@ public class MenuScreen {
 		Container cp = window.getContentPane();
 
 		JPanel menuPanel = new JPanel();
-		//menuPanel.setLayout(new GridLayout(2, 1));
-		menuPanel.setPreferredSize(new Dimension(200, 100));
+		menuPanel.setPreferredSize(new Dimension(500, 500));
 
 		JButton loadAndUpdateDataButton = new JButton("Load and Update Data");
 		menuPanel.add(loadAndUpdateDataButton);

@@ -1,29 +1,25 @@
 package Controller;
 
 import Model.DataModel;
-import Model.DataModelInterface;
-import View.DataView;
+import java.awt.Graphics2D;
+import java.io.IOException;
+import java.awt.Color;
+import java.awt.Font;
 
-public class DataController implements DataControllerInterface{
-	private DataView view;
-	private DataModelInterface model;
-
-	//View the application's GUI
-	public void startApplication() {
-		view = new DataView();
-		view.setVisible(true);
-
-	}
-
+public class DataController implements DataControllerInterface {
+	private String message = null;
 	
-	public String getMessage() {
-		try {
-			model = new DataModel();
-			return model.loadData();
-		} catch (Exception e) {
-			return "There was an error loading data";
-		}
+	private DataModel model = new DataModel();
+
+	@Override
+	public String getMessage(){
 		
+		try {
+			message = model.loadData();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return message;
 	}
 
 	@Override
@@ -38,6 +34,14 @@ public class DataController implements DataControllerInterface{
 		}
 	
 	}
+
+	public void render(Graphics2D g2)  {
+		g2.setColor(Color.yellow);
+		g2.setFont(new Font("Courier", Font.BOLD, 20));
+		g2.drawString(getMessage(), 50, 100);
+	}
+
+	
 
 
 	
