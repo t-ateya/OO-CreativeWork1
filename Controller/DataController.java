@@ -41,8 +41,4 @@ public class DataController implements DataControllerInterface {
 		g2.drawString(getMessage(), 50, 100);
 	}
 
-	
-
-
-	
 }
