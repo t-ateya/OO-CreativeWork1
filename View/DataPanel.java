@@ -13,8 +13,6 @@ import java.awt.GridLayout;
 import java.awt.BorderLayout;
 import java.awt.Container;
 
-
-
 public class DataPanel {
 	private JFrame window;
 	private DataCanvas canvas;

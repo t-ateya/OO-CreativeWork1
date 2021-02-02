@@ -32,9 +32,7 @@ public class DataEventListener implements ActionListener {
 		} else if (button == panel.getLoadDataButton()){
 			panel.getCanvas().repaint();
 		}else if (button == panel.getUpdateDataButton()){
-			//DataView dv = new DataView();
-			//dv.initComponents();
-			//System.out.println("Text Area: " + panel.getMyMesssageArea().getText());
+			
 			String message = panel.getMyMesssageArea().getText();
 			if (message.equals("")){
 				JOptionPane.showMessageDialog(panel.getWindow(), "No data typed yet" + "\n Type Data to update");
@@ -44,7 +42,7 @@ public class DataEventListener implements ActionListener {
 			}
 			panel.getMyMesssageArea().setText("");
 			
-			//System.out.println("Data view called");
+			
 
 			
 			
